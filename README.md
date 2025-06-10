@@ -23,3 +23,36 @@
 ## Tips
 * Pastikan Anda telah mengkonfigurasi endpoint webhook di project Anda untuk menerima request dari Saweria.
 * Gunakan secret key untuk memverifikasi signature webhook dan mencegah serangan keamanan.
+
+### Usage examples
+```
+async function checkIntegration() {
+  try {
+    const response = await fetch('https://example.vercel.app/api');       
+    const data = await response.json();
+
+    if (response.ok) {
+      console.log('Integrasi berhasil:', data);
+      return true;
+    } else {
+      console.error('Integrasi gagal:', data);
+      return false;
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    return false;
+  }
+}
+
+                    
+checkIntegration().then((result) => {
+  if (result) {
+    console.log('
+checkIntegration().then((result) => {
+  if (result) {
+    console.log('Integrasi sukses!');
+  } else {
+    console.log('Integrasi gagal!');
+  }
+});
+```
