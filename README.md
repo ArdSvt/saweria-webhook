@@ -25,7 +25,7 @@
 * Gunakan secret key untuk memverifikasi signature webhook dan mencegah serangan keamanan.
 
 ### Usage examples
-```
+```js
 async function checkIntegration() {
   try {
     const response = await fetch('https://example.vercel.app/api');       
